@@ -5,7 +5,7 @@
 </p>
 
 > [!NOTE]
-> **Wireless OSINT & Signal Intelligence Platform**
+> **Wireless OSINT & Signal Intelligence Platform** soon we will integrate AI in it.
 
 WireTapper is a wireless OSINT tool designed to discover, map, and analyze radio-based devices using passive signal intelligence. It provides investigators, researchers, and security analysts with real-time visibility into the invisible wireless landscape around them.
 
