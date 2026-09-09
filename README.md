@@ -123,6 +123,13 @@ Follow these steps to set up and start WireTapper:
 
 ## 📷 Screenshots
 
+![WireTapper Screenshot 1](https://github.com/h9zdev/WireTapper/blob/main/images/w0.png)
+![WireTapper Screenshot 2](https://github.com/h9zdev/WireTapper/blob/main/images/w1.png)
+![WireTapper Screenshot 3](https://github.com/h9zdev/WireTapper/blob/main/images/w2.png)
+![WireTapper Screenshot 4](https://github.com/h9zdev/WireTapper/blob/main/images/w3.png)
+![WireTapper Screenshot 5](https://github.com/h9zdev/WireTapper/blob/main/images/w4.png)
+![WireTapper Screenshot 5](https://github.com/h9zdev/WireTapper/blob/main/images/w5.png)
+ 
 
 
 ## 📜 License
