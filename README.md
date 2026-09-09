@@ -52,33 +52,34 @@ WireTapper identifies leaked Wi-Fi network credentials based on privacy-protecti
 > [![GitHub](https://img.shields.io/badge/GitHub-h9zdev%2FEthiFi-green?logo=github&style=flat-square)](https://github.com/h9zdev/EthiFi)
 
 <br>
-## 📶 Supported Signal Intelligence
+## 📶 Supported Signal Intelligence & Modules
 
 WireTapper can identify and analyze signals from:
 
-*   **Wi-Fi** access points & clients, Wi-Fi credentials leak
-*   **Bluetooth & BLE** devices
-*   **Wireless CCTV / IP cameras**
-*   **Vehicles** broadcasting RF signals (infotainment, telemetry, keyless systems)
-*   **Headphones, wearables**, and smart devices
-*   **Smart TVs & IoT** appliances
-*   **Cell towers** & mobile network beacons
+*   **Wi-Fi Intelligence**: Access points, clients, and leaked credentials using a privacy-protecting k-Anonymity query scheme.
+*   **Bluetooth LE & RPA Radar (`/btscan`)**: Live passive BLE device detection, RSSI path-loss distance estimation, and Resolvable Private Address (RPA) resolution using AES-128-ECB `ah()` cryptographic functions.
+*   **Flock Safety & ALPR Surveillance Intelligence**: Dedicated management, download, and mapping module for Automated License Plate Reader (ALPR) camera networks and telemetry datasets.
+*   **Multi-Format Telemetry Importer**: Drag-and-drop ingestion and smart column-mapping for custom field reports in CSV, KML, GeoJSON, SQLite (`.db`), and Excel formats.
+*   **IoT & SCADA Infrastructure Reconnaissance**: Real-time geolocation scanning for exposed cameras, IoT nodes, and industrial control systems via Shodan & Censys Search API v2.
+*   **USB SDR Receiver Detection**: Hardware link detection for attached Software Defined Radio dongles (RTL-SDR, HackRF One, Airspy) with frequency range monitoring.
+*   **Cellular Infrastructure**: Cell tower location and beacon analysis using WiGLE and OpenCellID databases.
+*   **Vehicles & Consumer Devices**: RF signals from smart vehicles, dashcams, IP cameras, wearables, and IoT appliances.
 
 
 ## 🔑 API Services
 
-WireTapper integrates with several external services to provide intelligence. You will need to obtain API keys from the following:
+WireTapper integrates with several external intelligence services. Configure API credentials for enhanced discovery capabilities:
 
-*   **[Wigle.net](https://wigle.net/)** – Wireless network mapping and discovery.
-*   **[wpa-sec](https://wpa-sec.stanev.org)** – Distributed WPA-PSK auditor database.
-*   **[OpenCellID](https://opencellid.org/)** – Open-source database of cell towers.
-*   **[Shodan](https://www.shodan.io/)** – Search engine for Internet-connected devices.
-    *   **Note:** A **Premium account** is required to use Shodan's API with this tool.
+*   **[Wigle.net](https://wigle.net/)** – Wireless network and Bluetooth mapping and discovery (`WIGLE_API_NAME`, `WIGLE_API_TOKEN`).
+*   **[OpenCellID](https://opencellid.org/)** – Open-source global database of cell towers (`OPENCELLID_API_KEY`).
+*   **[Shodan](https://www.shodan.io/)** – Search engine for Internet-connected IoT and industrial devices (`SHODAN_API_KEY`).
+*   **[Censys](https://censys.io/)** – Internet host and service search API v2 (`CENSYS_API_ID`, `CENSYS_API_SECRET`).
+*   **[wpa-sec](https://wpa-sec.stanev.org)** – Distributed WPA-PSK auditor database integration.
 
 
-## 🚀 Installation
+## 🚀 Installation & Configuration
 
-Follow these steps to get WireTapper up and running:
+Follow these steps to set up and start WireTapper:
 
 1. **Clone the repository:**
    ```bash
@@ -87,42 +88,37 @@ Follow these steps to get WireTapper up and running:
    ```
 
 2. **Install dependencies:**
-   It is recommended to use a virtual environment.
+   It is recommended to use a Python virtual environment.
    ```bash
    pip install -r WireTapper.txt
    ```
 
-3. **Configure API Keys and Run:**
+3. **Configure API Keys:**
 
-   Choose one of the following methods to configure your API keys and run the application:
+   API credentials are saved directly into a local SQLite database (`credentials.db`). You can configure them in one of two ways:
 
-   ### Method 1: Modify `app.py` (Direct Configuration)
-   Open `app.py` and manually enter your API keys by replacing the empty strings:
-   ```python
-   WIGLE_API_NAME = "your_wigle_api_name"
-   WIGLE_API_TOKEN = "your_wigle_api_token"
-   OPENCELLID_API_KEY = "your_opencellid_api_key"
-   SHODAN_API_KEY = "your_shodan_api_key"
-   ```
-   Then, start the server:
+   *   **Option A: `.env` File (Automatic Seeding)**
+       Create or edit the `.env` file in the root directory:
+       ```env
+       WIGLE_API_NAME=your_wigle_api_name
+       WIGLE_API_TOKEN=your_wigle_api_token
+       OPENCELLID_API_KEY=your_opencellid_api_key
+       SHODAN_API_KEY=your_shodan_api_key
+       CENSYS_API_ID=your_censys_api_id
+       CENSYS_API_SECRET=your_censys_api_secret
+       ```
+       On application startup, `app.py` automatically initializes `credentials.db` and populates any missing keys from your `.env` file.
+
+   *   **Option B: In-App Settings UI**
+       Open the application dashboard in your browser and click the **Settings** gear icon in the navigation bar to enter or update your API credentials at runtime without restarting the server.
+
+4. **Launch Application:**
    ```bash
    python app.py
    ```
 
-   ### Method 2: Use `app-env.py` (Environment Variables)
-   This is the recommended approach for better security. You can export your keys in the terminal:
-   ```bash
-   export WIGLE_API_NAME="your_wigle_api_name"
-   export WIGLE_API_TOKEN="your_wigle_api_token"
-   export OPENCELLID_API_KEY="your_opencellid_api_key"
-   export SHODAN_API_KEY="your_shodan_api_key"
-   ```
-   Alternatively, you can define these keys in a `.env` file. Then, start the server:
-   ```bash
-   python app-env.py
-   ```
-
-   The application will be available at `http://localhost:8080/map-w`.
+   *   **Main Signal Intelligence Dashboard:** `http://localhost:8080/map-w` (or `http://localhost:8080/`)
+   *   **Bluetooth LE & RPA Radar Interface:** `http://localhost:8080/btscan`
 
 ## 📷 Screenshots
 
