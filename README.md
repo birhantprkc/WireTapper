@@ -52,11 +52,12 @@ WireTapper identifies leaked Wi-Fi network credentials based on privacy-protecti
 > [![GitHub](https://img.shields.io/badge/GitHub-h9zdev%2FEthiFi-green?logo=github&style=flat-square)](https://github.com/h9zdev/EthiFi)
 
 <br>
+
 ## 📶 Supported Signal Intelligence & Modules
 
 WireTapper can identify and analyze signals from:
 
-*   **Wi-Fi Intelligence**: Access points, clients, and leaked credentials using a privacy-protecting k-Anonymity query scheme.
+*   **Wi-Fi Intelligence**: Detect and map Wi-Fi networks and access points, monitor Wi-Fi activity, and analyze available Wi-Fi metadata and signal information.
 *   **Bluetooth LE & RPA Radar (`/btscan`)**: Live passive BLE device detection, RSSI path-loss distance estimation, and Resolvable Private Address (RPA) resolution using AES-128-ECB `ah()` cryptographic functions.
 *   **Flock Safety & ALPR Surveillance Intelligence**: Dedicated management, download, and mapping module for Automated License Plate Reader (ALPR) camera networks and telemetry datasets.
 *   **Multi-Format Telemetry Importer**: Drag-and-drop ingestion and smart column-mapping for custom field reports in CSV, KML, GeoJSON, SQLite (`.db`), and Excel formats.
@@ -122,11 +123,6 @@ Follow these steps to set up and start WireTapper:
 
 ## 📷 Screenshots
 
-![WireTapper Image 1](https://raw.githubusercontent.com/h9zdev/WireTapper/main/images/Wiretapper11.png)  
-![WireTapper Image 2](https://raw.githubusercontent.com/h9zdev/WireTapper/main/images/Wiretapper34.png)  
-![WireTapper Image 3](https://raw.githubusercontent.com/h9zdev/WireTapper/main/images/Wiretapper354.png)  
-![WireTapper Image 4](https://raw.githubusercontent.com/h9zdev/WireTapper/main/images/Wiretapper55.png)  
-![WireTapper Image 5](https://raw.githubusercontent.com/h9zdev/WireTapper/main/images/Wiretapper568.png)
 
 
 ## 📜 License
