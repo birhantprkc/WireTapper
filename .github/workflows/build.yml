@@ -69,41 +69,9 @@ jobs:
           name: WireTapper-Linux
           path: dist/WireTapper-Linux
 
-  build-apk:
-    name: Build Android APK
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Install System Dependencies for Buildozer
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential ccache git libffi-dev libssl-dev python3-dev zip unzip zlib1g-dev openjdk-17-jdk autoconf libtool pkg-config libncurses5-dev libncursesw5-dev libtinfo5 cmake libsqlite3-dev
-
-      - name: Install Buildozer and Cython
-        run: |
-          python -m pip install --upgrade pip
-          pip install --upgrade buildozer Cython
-
-      - name: Build Android APK
-        run: |
-          buildozer -v android debug
-
-      - name: Upload Android APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: WireTapper-Android-APK
-          path: bin/*.apk
-
   create-release:
     name: Publish Release
-    needs: [build-windows, build-linux, build-apk]
+    needs: [build-windows, build-linux]
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
     steps:
@@ -121,7 +89,6 @@ jobs:
           files: |
             release-artifacts/WireTapper-Windows/WireTapper-Windows.exe
             release-artifacts/WireTapper-Linux/WireTapper-Linux
-            release-artifacts/WireTapper-Android-APK/*.apk
           draft: false
           prerelease: false
           generate_release_notes: true
