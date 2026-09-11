@@ -1,21 +1,26 @@
-# 📡 WireTapper 
+# 📡 WireTapper
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/h9zdev/WireTapper/main/images/WireTapper.png" alt="WireTapper" />
 </p>
 
 > [!NOTE]
-> **Wireless OSINT & Signal Intelligence Platform** soon we will integrate AI in it.
+> **Wireless OSINT & Signal Intelligence Platform** — soon we will integrate AI in it.
 
 WireTapper is a wireless OSINT tool designed to discover, map, and analyze radio-based devices using passive signal intelligence. It provides investigators, researchers, and security analysts with real-time visibility into the invisible wireless landscape around them.
 
 WireTapper detects and correlates signals from common wireless technologies, helping users understand what devices exist, where they are likely located, and how they interact, without active intrusion.
 
-WireTapper identifies leaked Wi-Fi network credentials based on privacy-protecting k-Anonymity query scheme.
+WireTapper identifies leaked Wi-Fi network credentials based on a privacy-protecting k-Anonymity query scheme.
 
 <p align="center">
   🔗 <strong>Website:</strong>
   <a href="https://haybnz.web.app?utm_source=github.com">https://haybnz.web.app</a>
+</p>
+
+<p align="center">
+  📖 <strong>Wiki (Installation & Setup):</strong>
+  <a href="https://github.com/h9zdev/WireTapper/wiki">github.com/h9zdev/WireTapper/wiki</a>
 </p>
 
 <p align="center">
@@ -30,6 +35,7 @@ WireTapper identifies leaked Wi-Fi network credentials based on privacy-protecti
     <img src="https://img.shields.io/badge/Make%20a%20Difference-Sponser%20My%20Work-6A1B9A?style=for-the-badge&logo=github&logoColor=white" alt="Support My Work" />
   </a>
 </p>
+
 <p align="center">
   <a href="https://github.com/h9zdev/WireTapper">
     <img src="https://img.shields.io/static/v1?label=Python&message=WireTapper&color=2A3E87&labelColor=6A7DA8&style=for-the-badge&logo=python&logoColor=white" />
@@ -64,13 +70,15 @@ WireTapper identifies leaked Wi-Fi network credentials based on privacy-protecti
 </p>
 
 
-> [!Note]
+
+> [!NOTE]
 > ## 🛰️ SocioSential — Social Media OSINT
 > [![GitHub](https://img.shields.io/badge/GitHub-h9zdev%2FSocioSential-blue?logo=github&style=flat-square)](https://github.com/h9zdev/SocioSential)
+>
 > ## 📡 EthiFi — WiFi Deauther *(New Version)*
 > [![GitHub](https://img.shields.io/badge/GitHub-h9zdev%2FEthiFi-green?logo=github&style=flat-square)](https://github.com/h9zdev/EthiFi)
 
-<br>
+
 
 ## 📶 Supported Signal Intelligence & Modules
 
@@ -86,6 +94,32 @@ WireTapper can identify and analyze signals from:
 *   **Vehicles & Consumer Devices**: RF signals from smart vehicles, dashcams, IP cameras, wearables, and IoT appliances.
 
 
+
+
+# 🚀 Installation & Configuration
+
+Welcome to the WireTapper installation and configuration guide.
+
+## 📦 Installation
+
+Choose the installation method for your operating system:
+
+- 🐧 [Linux Installation Guide](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%90%A7-Linux-Installation-Guide)
+- 🍎 [macOS Installation Guide](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%8D%8E-macOS-Installation-Guide)
+- 🪟 [Windows Installation Guide](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%AA%9F-Installtion--on-Windows)
+- 🐍 [Installation via PyPI](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%90%8D-Installation-via-PyPI)
+
+## ⚙️ Configuration
+
+After installing WireTapper, configure the required settings according to the platform-specific guide.
+
+## 🐍 Install from PyPI
+
+```bash
+pip install wiretapper
+```
+
+
 ## 🔑 API Services
 
 WireTapper integrates with several external intelligence services. Configure API credentials for enhanced discovery capabilities:
@@ -96,49 +130,9 @@ WireTapper integrates with several external intelligence services. Configure API
 *   **[Censys](https://censys.io/)** – Internet host and service search API v2 (`CENSYS_API_ID`, `CENSYS_API_SECRET`).
 *   **[wpa-sec](https://wpa-sec.stanev.org)** – Distributed WPA-PSK auditor database integration.
 
+> 📖 For full installation, configuration, and setup instructions, see the **[WireTapper Wiki](https://github.com/h9zdev/WireTapper/wiki)**.
 
-## 🚀 Installation & Configuration
 
-Follow these steps to set up and start WireTapper:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/h9zdev/WireTapper.git
-   cd WireTapper
-   ```
-
-2. **Install dependencies:**
-   It is recommended to use a Python virtual environment.
-   ```bash
-   pip install -r WireTapper.txt
-   ```
-
-3. **Configure API Keys:**
-
-   API credentials are saved directly into a local SQLite database (`credentials.db`). You can configure them in one of two ways:
-
-   *   **Option A: `.env` File (Automatic Seeding)**
-       Create or edit the `.env` file in the root directory:
-       ```env
-       WIGLE_API_NAME=your_wigle_api_name
-       WIGLE_API_TOKEN=your_wigle_api_token
-       OPENCELLID_API_KEY=your_opencellid_api_key
-       SHODAN_API_KEY=your_shodan_api_key
-       CENSYS_API_ID=your_censys_api_id
-       CENSYS_API_SECRET=your_censys_api_secret
-       ```
-       On application startup, `app.py` automatically initializes `credentials.db` and populates any missing keys from your `.env` file.
-
-   *   **Option B: In-App Settings UI**
-       Open the application dashboard in your browser and click the **Settings** gear icon in the navigation bar to enter or update your API credentials at runtime without restarting the server.
-
-4. **Launch Application:**
-   ```bash
-   python app.py
-   ```
-
-   *   **Main Signal Intelligence Dashboard:** `http://localhost:8080/map-w` (or `http://localhost:8080/`)
-   *   **Bluetooth LE & RPA Radar Interface:** `http://localhost:8080/btscan`
 
 ## 📷 Screenshots
 
@@ -148,7 +142,7 @@ Follow these steps to set up and start WireTapper:
 ![WireTapper Screenshot 4](https://github.com/h9zdev/WireTapper/blob/main/images/w3.png)
 ![WireTapper Screenshot 5](https://github.com/h9zdev/WireTapper/blob/main/images/w4.png)
 ![WireTapper Screenshot 5](https://github.com/h9zdev/WireTapper/blob/main/images/w5.png)
- 
+
 
 
 ## 📜 License
@@ -159,14 +153,18 @@ This project is licensed under the Creative Commons Attribution-NonCommercial 4.
 
 📧 Contact: singularat@protn.me
 
+
 ## ☕ Support
 
 Donate via Monero: `45PU6txuLxtFFcVP95qT2xXdg7eZzPsqFfbtZp5HTjLbPquDAugBKNSh1bJ76qmAWNGMBCKk4R1UCYqXxYwYfP2wTggZNhq`
 
+
+
 ## 👥 Contributors and Developers
 
 [<img src="https://avatars.githubusercontent.com/u/67865621?s=64&v=4" width="64" height="64" alt="haybnzz">](https://github.com/h9zdev)
- [<img src="https://avatars.githubusercontent.com/u/108749445?s=64&v=4"  width="64" height="64" alt="VaradScript">](https://github.com/varadScript)
+[<img src="https://avatars.githubusercontent.com/u/108749445?s=64&v=4"  width="64" height="64" alt="VaradScript">](https://github.com/varadScript)
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=h9zdev/WireTapper&type=timeline&legend=bottom-right)](https://www.star-history.com/#h9zdev/WireTapper&type=timeline&legend=bottom-right)
