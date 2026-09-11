@@ -34,6 +34,9 @@ WireTapper identifies leaked Wi-Fi network credentials based on privacy-protecti
   <a href="https://github.com/h9zdev/WireTapper">
     <img src="https://img.shields.io/static/v1?label=Python&message=WireTapper&color=2A3E87&labelColor=6A7DA8&style=for-the-badge&logo=python&logoColor=white" />
   </a>
+  <a href="https://pypi.org/project/wiretapper/">
+    <img src="https://img.shields.io/pypi/v/wiretapper?style=for-the-badge&color=006DAD&labelColor=3776AB&logo=pypi&logoColor=white&label=PyPI" />
+  </a>
   <a href="https://github.com/h9zdev/WireTapper/issues">
     <img src="https://img.shields.io/github/issues/h9zdev/WireTapper?style=for-the-badge&color=8B0000&logo=github" />
   </a>
@@ -44,6 +47,22 @@ WireTapper identifies leaked Wi-Fi network credentials based on privacy-protecti
     <img src="https://img.shields.io/github/stars/h9zdev/WireTapper?style=for-the-badge&color=FFD700&logo=github" />
   </a>
 </p>
+
+<p align="center">
+  <a href="https://github.com/h9zdev/WireTapper/releases/download/WireTapper/WireTapper-Linux">
+    <img src="https://img.shields.io/static/v1?label=Platform&message=Linux&color=E95420&labelColor=333333&style=for-the-badge&logo=linux&logoColor=white" />
+  </a>
+  <a href="https://github.com/h9zdev/WireTapper/releases/download/WireTapper/WireTapper-macOS">
+    <img src="https://img.shields.io/static/v1?label=Platform&message=macOS&color=000000&labelColor=999999&style=for-the-badge&logo=apple&logoColor=white" />
+  </a>
+  <a href="https://github.com/h9zdev/WireTapper/releases/download/WireTapper/WireTapper-Windows.exe">
+    <img src="https://img.shields.io/static/v1?label=Platform&message=Windows&color=0078D6&labelColor=00539C&style=for-the-badge&logo=windows&logoColor=white" />
+  </a>
+  <a href="https://pypi.org/project/wiretapper/">
+    <img src="https://img.shields.io/static/v1?label=Install&message=pip%20install%20wiretapper&color=3776AB&labelColor=FFD43B&style=for-the-badge&logo=python&logoColor=white" />
+  </a>
+</p>
+
 
 > [!Note]
 > ## 🛰️ SocioSential — Social Media OSINT
