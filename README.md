@@ -108,6 +108,7 @@ Choose the installation method for your operating system:
 - 🍎 [macOS Installation Guide](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%8D%8E-macOS-Installation-Guide)
 - 🪟 [Windows Installation Guide](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%AA%9F-Installtion--on-Windows)
 - 🐍 [Installation via PyPI](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%90%8D-Installation-via-PyPI)
+- 🤖 [Installation via (Android)](https://github.com/h9zdev/WireTapper/wiki/%F0%9F%A4%96-Installation-on-Android-(Termux))
 
 ## ⚙️ Configuration
 
